@@ -1,1 +1,116 @@
 /* Add styles here */
+
+/* Theme Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg-color: #f9f9f9;
+  --card-border-color: #eee;
+  --button-bg-color: #007bff;
+  --button-hover-bg-color: #0056b3;
+  --lotto-num-color: #28a745;
+  --lotto-num-bg-color: #e9ffe9;
+  --lotto-num-border-color: #28a745;
+}
+
+body.dark-mode {
+  --bg-color: #333333;
+  --text-color: #f0f0f0;
+  --card-bg-color: #444444;
+  --card-border-color: #555555;
+  --button-bg-color: #6c757d;
+  --button-hover-bg-color: #5a6268;
+  --lotto-num-color: #90ee90;
+  --lotto-num-bg-color: #3a503a;
+  --lotto-num-border-color: #66bb6a;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: var(--button-bg-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+
+#lotto-generator {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  background-color: var(--card-bg-color);
+  max-width: 500px; /* Adjust as needed */
+  margin: 20px auto; /* Center the block horizontally */
+  text-align: center; /* Center content within the block */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+#lotto-generator h2 {
+  color: var(--text-color);
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+#generateLottoNumbers {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#generateLottoNumbers:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+#lottoNumbersDisplay {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--lotto-num-color);
+  min-height: 30px; /* Ensure space even when empty */
+  border: 1px dashed var(--lotto-num-border-color);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+#lottoNumbersDisplay span {
+  display: inline-block;
+  background-color: var(--lotto-num-bg-color);
+  border: 1px solid var(--lotto-num-border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: var(--lotto-num-color);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
